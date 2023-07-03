@@ -11,6 +11,7 @@ set.seed(123)
 library(shiny)
 library(ggplot2)
 library(stats)
+library(bslib)
 
 # Custom - Front
 
@@ -23,8 +24,6 @@ info <- "The Monte Carlo methodology is a statistical technique that involves th
 # Front-end
 
 ui <- shiny::fluidPage(
-  actionButton("refresh", "Refresh"),
-  actionButton("quitButton", "Exit", icon = icon("redo")),
   theme = custom_theme,
   titlePanel("Monte Carlo Simulation"),
   sidebarLayout(
@@ -44,9 +43,12 @@ ui <- shiny::fluidPage(
           fluidRow(
             column(width = 12,
                    textOutput("descricao")
-            )
+            ), 
+            column(width = 12,
+                   HTML("Developed by Luiz Paulo Tavares, GitHub: <a href='https://github.com/LuizPaulo23'>https://github.com/LuizPaulo23</a>")
           )
-        ),
+        )
+     ),
         tabPanel(
           "Plots",
           fluidRow(
@@ -85,6 +87,7 @@ MonteCarlo <- function(intercept, beta, n, repetitions) {
     list(intercept_mc, beta_mc)
   }
   
+  # INFOR
 
 output$descricao <- renderText({
  info
@@ -103,7 +106,7 @@ output$descricao <- renderText({
       media <- mean(mc_data[[1]])
       desvio_padrao <- sd(mc_data[[1]])
       
-      # Criar o histograma com ggplot
+  
       ggplot() +
         geom_histogram(data = data.frame(x = mc_data[[1]]), aes(x = x),
                        fill = "gray", 
@@ -155,7 +158,6 @@ output$descricao <- renderText({
       
     }
   })
-  
   
   
   # Função para fazer o download dos dados
