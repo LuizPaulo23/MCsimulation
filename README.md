@@ -14,3 +14,12 @@ In this equation, Yᵢ represents the dependent variable, Xᵢ is the independen
 The Monte Carlo simulation technique allows for generating multiple realizations of the model by sampling from random input values. This process helps estimate the model parameters (β₁ and β₂) and evaluate the uncertainty associated with these estimates. By running simulations with different input values, the platform can obtain a distribution of results, providing insights into the potential range of outcomes.
 
 Users of the platform can specify the number of simulations to be performed and define the range or distribution of values for the independent variable(s). The platform then automatically runs the simulations, estimates the model parameters, and provides the resulting distributions or summary statistics. This capability enables users to assess the variability and uncertainty in the model's predictions, making it a valuable tool for decision-making, risk analysis, or sensitivity analysis in various fields.
+
+# Examples 
+
+To access the platform, please follow the link: https://flyclass.shinyapps.io/MCsimulation/
+
+![01](./imagens/01.png)
+
+
+
