@@ -1,0 +1,14 @@
+name: MCsimulation
+title: MCsimulation
+username:
+account: flyclass
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9398518
+bundleId: 7416169
+url: https://flyclass.shinyapps.io/MCsimulation/
+when: 1688422972.90269
+lastSyncTime: 1688422972.90271
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: Func_MonteCarlo.R|README.md|Test_FUN_MonteCarlo.R
